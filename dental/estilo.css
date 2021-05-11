@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#flex-container{
+    display: flex;
+    align-items: center;
+    background-color: #48C88B;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    flex-direction: row;
+    width: 100%;
+}
+
+ul.navigation {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.navigation a {
+    display: block;
+    text-decoration: none;
+    letter-spacing: .35rem;
+    padding:1.5em;
+    font-style: 1.2em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-weight: bold;
+    color: #FFF4F4;
+    transition: .3s;
+    
+}
+
+.navigation a:hover {
+    background: #ebe9e9;
+    color:#48C88B;
+}
+
+#logo{
+    display: flex;
+    width:20%;
+    margin-left: 1rem;
+}
+#search_icon{
+    width:18%;
+    margin-bottom: .4rem;
+    margin-left: 7rem;
+}
+
+#search_bar{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    align-items: flex-end;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+#search_bar #unidades{
+    display: flex;
+    margin-right: 3rem;
+    margin-bottom:.5rem;
+    width: 100vw;
+    height: 5vh;
+    border-radius: 15px;
+    
+}
+#unidades{
+    color: #817A7A;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 30px;
+    border:0;
+}
+#unidades:focus{
+    outline: none;
+}
+select::-ms-expand {display: none;}
+
+/*fim do header*/
+
+#slide {
+    width: 50%;
+    overflow: hidden;
+    margin: 10px auto;
+    margin-top: 80px;
+    height: 333px;
+    position: relative; 
+    }
+    
+    #slide img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    }
+
+/* fim do carrossel */
+
+#agendamento_bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 18vh;
+    background: rgba(0, 0, 0, 0.6);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation: 2s move;
+    
+    
+}
+
+@keyframes move {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+  }
+
+#agendamento_bg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+#conteudo{
+    display: flex;
+    width: 100%;
+    height: 120vh;
+
+}
+
+
+  
+
+#conteudo #titulo{
+    color: #FFFEFE;
+    position: absolute;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 18vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 85%;
+    
+    
+}
+
+#conteudo #lista{
+    display: flex;
+    align-self: center;
+    margin-left: 4vw;
+    
+    font-family: sans-serif;
+
+}
+
+#lista ul li .circle{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: -3vw;
+    margin-top: 0.6vh;
+    border-radius: 100%;
+    background-color:#48C88B;
+    
+}
+
+#lista ul li{
+    margin-top: 8vh;
+    font-size: 2rem;
+    list-style: none;
+}
+#lista ul li span{
+    color: #FFFEFE;
+}
+
+#conteudo #botao_agendar{
+    position: absolute;
+    align-self:flex-end;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 25vh;
+}
+
+#conteudo #botao_agendar a button{
+    width: 50vh;
+    height: 5vw;
+    background-color: #48C88B;
+    color: #FFFEFE;
+    font-size: 28px;
+    border: 0;
+    border-radius: 30px;
+    transition: .3s;
+    
+}
+
+#conteudo #botao_agendar a button:hover{
+    background-color:#FFFEFE ;
+    color:#48C88B;
+}
+
+/*fim do conteúdo que compõe a imagem*/ 
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3vw;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+    font-family:sans-serif;
+}
+
+.texto p{
+    margin-top: 3vh;
+    
+}
+
+/*Fim parágrafos*/
+
+#formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+
+#formulario #form{
+    display: block;
+    width: 60%;
+    height: 100%;
+    background-color: #F3EAEA;
+    color:#48C88B;
+    border-radius: 25px;
+}
+
+#form h2{
+    text-align: center;
+    justify-content: center;
+    margin: 4vh 0;
+    margin-bottom: 10vh;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.flex-outer li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5vh 1vw;
+    flex-direction: row;
+    font-size: 35px;
+    font-weight: bold;
+    width: 73%;
+}
+
+.flex-outer > li > label{
+    flex: 1 0 120px;
+    max-width: 190px;
+}
+
+.flex-outer > li > label + *{
+    flex: 1 0 200px;
+}
+
+.flex-outer input, .flex-outer button{
+    height: 6.5vh;
+    border: 0;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.flex-outer input:focus{
+    outline: none;
+}
+
+#button_submit{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    margin-top: 10vh;
+}
+#button_submit button{
+    background-color: #48C88B;
+    color: #F3EAEA;
+    border: 0;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    width: 20vw;
+    height: 8vh;
+    border: 1px solid black;
+    
+    transition: .3s;
+    
+}
+
+#button_submit button:hover{
+    background: #ebe9e9;
+    color:#48C88B;
+}
+
+/*formulario finalizado*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color:#48C88B;
+    margin-top: 15vh;
+    bottom: 0vh;
+}
+
+footer p{
+    margin: 1vh 0;
+    color: #F3EAEA;
+    font-family:sans-serif ;
+}
+
+/*index finalizado*/
+
+#gray-container{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #EBE6E6;
+    width: 25%;
+    height: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    margin-left: 1vw;
+    border-radius: 10px;
+
+}
+
+#gray-container h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-weight: lighter;
+    color:#48C88B;
+}
+#lista_servicos ul li {
+    width: 100%;
+    height: 30vh;
+    list-style-type: none;
+    margin: 10vh 0;
+    
+}
+
+#lista_servicos ul li .circle{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-left: .7vw;
+    margin-top: -1vh;
+    border-radius: 100%;
+    background-color:#48C88B;
+}
+
+#lista_servicos ul li .conteudo_servico {
+    display: flex;
+    width: 65%;
+    
+}
+
+#lista_servicos ul li .conteudo_servico p, #lista_servicos h2{
+    margin-left: 10vh;
+    text-align: left;
+}
+
+#lista_servicos ul li .conteudo_servico p{
+    
+    font-family: sans-serif;
+    font-size: 18px;
+    color:#48C88B;
+}
+
+#lista_servicos ul li .vetores{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    margin-top: -30vh;
+    margin-bottom: 5vh;
+    
+}
+#lista_servicos ul li  .vetores img {
+   
+    width : 35%;
+    height: 35%;
+    vertical-align: middle;
+    
+}
+
+#lista_servicos ul li  .vetores #aparelho{
+    margin-top: 4vh;
+
+}
+
+#lista_servicos ul li  h2{
+    margin-bottom: 5vh;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+#agendar_servico{
+    display: flex;
+    justify-content: center;
+}
+
+#agendar_servico a button{
+    width: 50vh;
+    height: 5vw;
+    background-color: #48C88B;
+    color: white;
+    font-size: 28px;
+    border: 0;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+#agendar_servico a button:hover{
+    background: #ebe9e9;
+    color:#48C88B;
+}
+
+
+
